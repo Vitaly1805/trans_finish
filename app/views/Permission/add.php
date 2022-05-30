@@ -394,6 +394,50 @@
                                         {% endif %}
                                     </div>
                                 </div>
+                                <div class="condition-permission__item">
+                                    <div class="condition-permission__subtitle">
+                                        4.6 Ответственные за проведение маскирования:
+                                    </div>
+                                    <div class="permission-add__responsibles">
+                                        {% for responsible in responsiblesForMask %}
+                                        <div class="permission-add__responsible">
+                                            <div class="permission-add__name">
+                                                {{responsible.lastname}} {{responsible.name}} {{responsible.patronymic}}
+                                            </div>
+                                            <input type="text" hidden class="responsible__id" value="{{responsible.user_id}}">
+                                            <span class="icon-clear permission-add__clear permission__del_user"></span>
+                                        </div>
+                                        {% endfor %}
+                                        {% if roles.isAuthor and permission.status_id < 3 %}
+                                        <form action="http://trans/employee" method="post">
+                                            <input type="text" readonly name="id_type_person" value="6" hidden>
+                                            <input type="submit" class="permission-add__button input button" value="Добавить ответственного за проведение маскирования" name="add-responsible"  style="width: 500px">
+                                        </form>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <div class="condition-permission__item">
+                                    <div class="condition-permission__subtitle">
+                                        4.7 Ответственные за контроль маскирования:
+                                    </div>
+                                    <div class="permission-add__responsibles">
+                                        {% for responsible in responsiblesForControlMask %}
+                                        <div class="permission-add__responsible">
+                                            <div class="permission-add__name">
+                                                {{responsible.lastname}} {{responsible.name}} {{responsible.patronymic}}
+                                            </div>
+                                            <input type="text" hidden class="responsible__id" value="{{responsible.user_id}}">
+                                            <span class="icon-clear permission-add__clear permission__del_user"></span>
+                                        </div>
+                                        {% endfor %}
+                                        {% if roles.isAuthor and permission.status_id < 3 %}
+                                        <form action="http://trans/employee" method="post">
+                                            <input type="text" readonly name="id_type_person" value="7" hidden>
+                                            <input type="submit" class="permission-add__button input button" value="Добавить ответственного за контроль маскирования" name="add-responsible"  style="width: 500px">
+                                        </form>
+                                        {% endif %}
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -364,7 +364,31 @@ class PermissionModel extends AppModel
             $permissions = $this->filterPermission($roles, $permissions);
         }
 
-        return $this->setColorsToPermissions($permissions);
+        $permissions = $this->setColorsToPermissions($permissions);
+
+        if($roles['isReplacementEngineer']) {
+            $permissions = $this->setIsMaskPermission($permissions, 6);
+        }
+
+        if($roles['isInspectingEngineer']) {
+            $permissions = $this->setIsMaskPermission($permissions, 7);
+        }
+
+        return $permissions;
+    }
+
+    protected function setIsMaskPermission($permissions = [], $typePersonId = 0):array {
+        foreach ($permissions as &$permission) {
+            $employees = $this->employee->getEmployee($typePersonId, $permission['id']);
+            foreach ($employees as $employee) {
+                if($employee['user_id'] == $_COOKIE['user']) {
+                    $permission['is_mask'] = true;
+                    break;
+                }
+            }
+        }
+
+        return $permissions;
     }
 
     protected function setCurrentStatuses($permissions, $nameStatus, $idStatus) {
@@ -741,6 +765,8 @@ class PermissionModel extends AppModel
                 'responsiblesForPreparation' => $this->employee->getEmployee(2, $_SESSION['idCurrentPermission']),
                 'responsiblesForExecute' => $this->employee->getEmployee(3, $_SESSION['idCurrentPermission']),
                 'responsiblesForControl' => $this->employee->getEmployee(4, $_SESSION['idCurrentPermission']),
+                'responsiblesForMask' => $this->employee->getEmployee(6, $_SESSION['idCurrentPermission']),
+                'responsiblesForControlMask' => $this->employee->getEmployee(7, $_SESSION['idCurrentPermission']),
                 'roles' => $this->role->getRoles($_COOKIE['user']),
                 'protections' => $this->permission->getProtectionsOfPermission($_SESSION['idCurrentPermission']),
                 'user_fio' => $this->getUserFio($this->db)];
