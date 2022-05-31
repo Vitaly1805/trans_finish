@@ -344,29 +344,9 @@
                     </form>
                     {% endif %}
                     {% if roles.isAuthor %}
-                    <form action="" method="post" class="permission__block-button hidden" id="cancel-apply-permission">
-                        <a class="input button button-content permission-event button-permission">Отменить утверждение</a>
+                    <form action="" method="post" class="hidden" id="cancel-apply-permission">
+                        <input type="submit" name="cancel-apply-permission" class="input button button-content permission-event button-permission" value="Отменить утверждение">
                         <input type="text" class="row-id-process" hidden name="id" required id="">
-                        <div class="permission__status permission-status">
-                            <div class="permission-status__body">
-                                <div class="permission-status__subtitle">
-                                    Фактическая дата отмены утверждения разрешения:
-                                </div>
-                                <input type="text" name="date" required="required" class="table-col__input date-mask input date permission-status__date" pattern="^(?:(?:31(\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\.)(?:0?[1,3-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$">
-                                <div class="permission-status__subtitle">
-                                    Фактическое время отмены утверждения разрешения:
-                                </div>
-                                <input type="text" name="time" required="required" class="table-col__input time-mask input permission-status__time" pattern="^([0-1][0-9]|2[0-4]):[0-5][0-9]$">
-                                <div class="permission-status__subtitle">
-                                    Комментарий:
-                                </div>
-                                <textarea class="permission-status__comment input textarea" name="comment" id="" cols="30" rows="10">
-								</textarea>
-                                <input type="text" readonly hidden class="permission-status__id">
-                                <input type="submit" name="cancel-apply-permission" class="permission-status__button permission-status__ok input button" value="Ок">
-                                <a class="permission-status__button permission-status__cancel input button">Отменить</a>
-                            </div>
-                        </div>
                     </form>
                     {% endif %}
                     {% if roles.isDispatcher %}
@@ -618,8 +598,8 @@
                             <div class="table-content__col table-content__head table-permission__head table-permission__period">Периоды работ</div>
                             <div class="table-content__col table-content__head table-permission__head table-permission__text">Типовые работы</div>
                             <div class="table-content__col table-content__head table-permission__head table-permission__text">Нетиповые работы</div>
-                            <div class="table-content__col table-content__head table-permission__head table-permission__text">Иное основание для создания разрешения</div>
-                            <div class="table-content__col table-content__head table-permission__head table-permission__text">Дополнительно</div>
+                            <div class="table-content__col table-content__head table-permission__head table-permission__text">Основание для создания разрешения</div>
+                            <div class="table-content__col table-content__head table-permission__head table-permission__text">При производстве работ обеспечить</div>
 						</div>
                         {% for permission in permissions %}
                         <input type="text" readonly value="{{permission.mask_color}}" hidden class="table-mask__background">

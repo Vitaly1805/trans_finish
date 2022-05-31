@@ -10003,3 +10003,119 @@ CONTEXT:  функция PL/pgSQL get_permission(integer,character varying,integ
  ===================== 
 [2022-05-26 16:40:52] Сообщение: Контроллер controllers\FaviconController не найден; Файл: D:\diplome\OpenServer\domains\trans\vendor\core\Router.php; Линия: 37 
  ===================== 
+[2022-05-31 11:43:31] Сообщение: SQLSTATE[42804]: Datatype mismatch: 7 ОШИБКА:  structure of query does not match function result type
+DETAIL:  Возвращаемый тип text не соответствует ожидаемому типу bpchar в столбце 2.
+CONTEXT:  функция PL/pgSQL get_typical_work(integer,integer,integer), строка 10, оператор RETURN QUERY; Файл: C:\OpenServer\domains\trans\app\widgets\typicalwork\TypicalWork.php; Линия: 16 
+ ===================== 
+[2022-05-31 11:47:44] Сообщение: SQLSTATE[HY093]: Invalid parameter number: :npsname; Файл: C:\OpenServer\domains\trans\app\widgets\protection\Protection.php; Линия: 58 
+ ===================== 
+[2022-05-31 12:09:33] Сообщение: SQLSTATE[HY093]: Invalid parameter number: :npsname; Файл: C:\OpenServer\domains\trans\app\widgets\protection\Protection.php; Линия: 58 
+ ===================== 
+[2022-05-31 12:09:53] Сообщение: SQLSTATE[HY093]: Invalid parameter number: :npsname; Файл: C:\OpenServer\domains\trans\app\widgets\protection\Protection.php; Линия: 58 
+ ===================== 
+[2022-05-31 12:10:36] Сообщение: SQLSTATE[HY093]: Invalid parameter number: :npsname; Файл: C:\OpenServer\domains\trans\app\widgets\protection\Protection.php; Линия: 58 
+ ===================== 
+[2022-05-31 13:41:37] Сообщение: Cannot modify header information - headers already sent by (output started at C:\OpenServer\domains\trans\app\controllers\MainController.php:41); Файл: C:\OpenServer\domains\trans\app\models\MainModel.php; Линия: 137 
+ ===================== 
+[2022-05-31 13:50:26] Сообщение: SQLSTATE[HY093]: Invalid parameter number: :period_start; Файл: C:\OpenServer\domains\trans\app\widgets\permission\Permission.php; Линия: 51 
+ ===================== 
+[2022-05-31 13:56:34] Сообщение: Undefined variable $permissions; Файл: C:\OpenServer\domains\trans\app\models\PermissionModel.php; Линия: 154 
+ ===================== 
+[2022-05-31 13:56:43] Сообщение: SQLSTATE[22P02]: Invalid text representation: 7 ОШИБКА:  неверный синтаксис для типа integer: "2022-05-31"; Файл: C:\OpenServer\domains\trans\app\widgets\permission\Permission.php; Линия: 53 
+ ===================== 
+[2022-05-31 13:57:18] Сообщение: SQLSTATE[22008]: Datetime field overflow: 7 ОШИБКА:  значение поля типа date/time вне диапазона: "2022-05-31"
+CONTEXT:  SQL-функция "add_permission", оператор 1; Файл: C:\OpenServer\domains\trans\app\widgets\permission\Permission.php; Линия: 53 
+ ===================== 
+[2022-05-31 13:59:15] Сообщение: SQLSTATE[22008]: Datetime field overflow: 7 ОШИБКА:  значение поля типа date/time вне диапазона: "2022-05-31"
+CONTEXT:  SQL-функция "add_permission", оператор 1; Файл: C:\OpenServer\domains\trans\app\widgets\permission\Permission.php; Линия: 53 
+ ===================== 
+[2022-05-31 14:00:55] Сообщение: SQLSTATE[22008]: Datetime field overflow: 7 ОШИБКА:  значение поля типа date/time вне диапазона: "2022-05-31"
+CONTEXT:  SQL-функция "add_permission", оператор 1; Файл: C:\OpenServer\domains\trans\app\widgets\permission\Permission.php; Линия: 53 
+ ===================== 
+[2022-05-31 14:00:57] Сообщение: SQLSTATE[22008]: Datetime field overflow: 7 ОШИБКА:  значение поля типа date/time вне диапазона: "2022-05-31"
+CONTEXT:  SQL-функция "add_permission", оператор 1; Файл: C:\OpenServer\domains\trans\app\widgets\permission\Permission.php; Линия: 53 
+ ===================== 
+[2022-05-31 14:00:58] Сообщение: SQLSTATE[22008]: Datetime field overflow: 7 ОШИБКА:  значение поля типа date/time вне диапазона: "2022-05-31"
+CONTEXT:  SQL-функция "add_permission", оператор 1; Файл: C:\OpenServer\domains\trans\app\widgets\permission\Permission.php; Линия: 53 
+ ===================== 
+[2022-05-31 14:00:58] Сообщение: SQLSTATE[22008]: Datetime field overflow: 7 ОШИБКА:  значение поля типа date/time вне диапазона: "2022-05-31"
+CONTEXT:  SQL-функция "add_permission", оператор 1; Файл: C:\OpenServer\domains\trans\app\widgets\permission\Permission.php; Линия: 53 
+ ===================== 
+[2022-05-31 14:00:59] Сообщение: SQLSTATE[22008]: Datetime field overflow: 7 ОШИБКА:  значение поля типа date/time вне диапазона: "2022-05-31"
+CONTEXT:  SQL-функция "add_permission", оператор 1; Файл: C:\OpenServer\domains\trans\app\widgets\permission\Permission.php; Линия: 53 
+ ===================== 
+[2022-05-31 14:00:59] Сообщение: SQLSTATE[22008]: Datetime field overflow: 7 ОШИБКА:  значение поля типа date/time вне диапазона: "2022-05-31"
+CONTEXT:  SQL-функция "add_permission", оператор 1; Файл: C:\OpenServer\domains\trans\app\widgets\permission\Permission.php; Линия: 53 
+ ===================== 
+[2022-05-31 14:00:59] Сообщение: SQLSTATE[22008]: Datetime field overflow: 7 ОШИБКА:  значение поля типа date/time вне диапазона: "2022-05-31"
+CONTEXT:  SQL-функция "add_permission", оператор 1; Файл: C:\OpenServer\domains\trans\app\widgets\permission\Permission.php; Линия: 53 
+ ===================== 
+[2022-05-31 14:00:59] Сообщение: SQLSTATE[22008]: Datetime field overflow: 7 ОШИБКА:  значение поля типа date/time вне диапазона: "2022-05-31"
+CONTEXT:  SQL-функция "add_permission", оператор 1; Файл: C:\OpenServer\domains\trans\app\widgets\permission\Permission.php; Линия: 53 
+ ===================== 
+[2022-05-31 14:01:05] Сообщение: SQLSTATE[22008]: Datetime field overflow: 7 ОШИБКА:  значение поля типа date/time вне диапазона: "2022-05-31"
+CONTEXT:  SQL-функция "add_permission", оператор 1; Файл: C:\OpenServer\domains\trans\app\widgets\permission\Permission.php; Линия: 53 
+ ===================== 
+[2022-05-31 14:05:02] Сообщение: Cannot modify header information - headers already sent by (output started at C:\OpenServer\domains\trans\app\widgets\permission\Permission.php:60); Файл: C:\OpenServer\domains\trans\app\models\AppModel.php; Линия: 11 
+ ===================== 
+[2022-05-31 14:06:51] Сообщение: Cannot modify header information - headers already sent by (output started at C:\OpenServer\domains\trans\vendor\core\libs\functions.php:5); Файл: C:\OpenServer\domains\trans\app\models\AppModel.php; Линия: 11 
+ ===================== 
+[2022-05-31 14:07:01] Сообщение: SQLSTATE[22008]: Datetime field overflow: 7 ОШИБКА:  значение поля типа date/time вне диапазона: "2022-05-31"
+CONTEXT:  SQL-функция "add_permission", оператор 1; Файл: C:\OpenServer\domains\trans\app\widgets\permission\Permission.php; Линия: 53 
+ ===================== 
+[2022-05-31 14:17:54] Сообщение: Undefined array key "period_start"; Файл: C:\OpenServer\domains\trans\app\models\PermissionModel.php; Линия: 471 
+ ===================== 
+[2022-05-31 14:18:25] Сообщение: Undefined array key "period_start"; Файл: C:\OpenServer\domains\trans\app\models\PermissionModel.php; Линия: 472 
+ ===================== 
+[2022-05-31 14:18:57] Сообщение: Undefined array key "period_start"; Файл: C:\OpenServer\domains\trans\app\models\PermissionModel.php; Линия: 470 
+ ===================== 
+[2022-05-31 14:19:11] Сообщение: Undefined array key "period_start"; Файл: C:\OpenServer\domains\trans\app\models\PermissionModel.php; Линия: 474 
+ ===================== 
+[2022-05-31 15:19:30] Сообщение: Cannot modify header information - headers already sent by (output started at C:\OpenServer\domains\trans\app\controllers\PermissionController.php:54); Файл: C:\OpenServer\domains\trans\app\models\AppModel.php; Линия: 11 
+ ===================== 
+[2022-05-31 15:21:43] Сообщение: Cannot modify header information - headers already sent by (output started at C:\OpenServer\domains\trans\app\models\PermissionModel.php:92); Файл: C:\OpenServer\domains\trans\app\models\AppModel.php; Линия: 11 
+ ===================== 
+[2022-05-31 15:23:30] Сообщение: Cannot modify header information - headers already sent by (output started at C:\OpenServer\domains\trans\app\models\PermissionModel.php:92); Файл: C:\OpenServer\domains\trans\app\models\AppModel.php; Линия: 11 
+ ===================== 
+[2022-05-31 15:24:04] Сообщение: Cannot modify header information - headers already sent by (output started at C:\OpenServer\domains\trans\app\controllers\PermissionController.php:54); Файл: C:\OpenServer\domains\trans\app\models\AppModel.php; Линия: 11 
+ ===================== 
+[2022-05-31 15:27:07] Сообщение: Undefined array key "period_start"; Файл: C:\OpenServer\domains\trans\app\models\PermissionModel.php; Линия: 478 
+ ===================== 
+[2022-05-31 15:30:01] Сообщение: Undefined array key "period_start"; Файл: C:\OpenServer\domains\trans\app\models\PermissionModel.php; Линия: 478 
+ ===================== 
+[2022-05-31 15:30:02] Сообщение: Undefined array key "period_start"; Файл: C:\OpenServer\domains\trans\app\models\PermissionModel.php; Линия: 478 
+ ===================== 
+[2022-05-31 15:30:03] Сообщение: Undefined array key "period_start"; Файл: C:\OpenServer\domains\trans\app\models\PermissionModel.php; Линия: 478 
+ ===================== 
+[2022-05-31 15:30:14] Сообщение: Undefined array key "period_start"; Файл: C:\OpenServer\domains\trans\app\models\PermissionModel.php; Линия: 478 
+ ===================== 
+[2022-05-31 15:30:34] Сообщение: SQLSTATE[22007]: Invalid datetime format: 7 ОШИБКА:  неверный синтаксис для типа date: ""; Файл: C:\OpenServer\domains\trans\app\widgets\permission\Permission.php; Линия: 89 
+ ===================== 
+[2022-05-31 15:31:06] Сообщение: SQLSTATE[22007]: Invalid datetime format: 7 ОШИБКА:  неверный синтаксис для типа date: ""; Файл: C:\OpenServer\domains\trans\app\widgets\permission\Permission.php; Линия: 89 
+ ===================== 
+[2022-05-31 15:31:06] Сообщение: SQLSTATE[22007]: Invalid datetime format: 7 ОШИБКА:  неверный синтаксис для типа date: ""; Файл: C:\OpenServer\domains\trans\app\widgets\permission\Permission.php; Линия: 89 
+ ===================== 
+[2022-05-31 15:31:06] Сообщение: SQLSTATE[22007]: Invalid datetime format: 7 ОШИБКА:  неверный синтаксис для типа date: ""; Файл: C:\OpenServer\domains\trans\app\widgets\permission\Permission.php; Линия: 89 
+ ===================== 
+[2022-05-31 15:31:06] Сообщение: SQLSTATE[22007]: Invalid datetime format: 7 ОШИБКА:  неверный синтаксис для типа date: ""; Файл: C:\OpenServer\domains\trans\app\widgets\permission\Permission.php; Линия: 89 
+ ===================== 
+[2022-05-31 15:31:06] Сообщение: SQLSTATE[22007]: Invalid datetime format: 7 ОШИБКА:  неверный синтаксис для типа date: ""; Файл: C:\OpenServer\domains\trans\app\widgets\permission\Permission.php; Линия: 89 
+ ===================== 
+[2022-05-31 15:31:06] Сообщение: SQLSTATE[22007]: Invalid datetime format: 7 ОШИБКА:  неверный синтаксис для типа date: ""; Файл: C:\OpenServer\domains\trans\app\widgets\permission\Permission.php; Линия: 89 
+ ===================== 
+[2022-05-31 15:44:52] Сообщение: Undefined array key "period_start"; Файл: C:\OpenServer\domains\trans\app\models\PermissionModel.php; Линия: 476 
+ ===================== 
+[2022-05-31 15:45:14] Сообщение: SQLSTATE[22P02]: Invalid text representation: 7 ОШИБКА:  неверный синтаксис для типа integer: "2022-05-31"; Файл: C:\OpenServer\domains\trans\app\widgets\permission\Permission.php; Линия: 53 
+ ===================== 
+[2022-05-31 16:09:34] Сообщение: SQLSTATE[23502]: Not null violation: 7 ОШИБКА:  нулевое значение в столбце "type_objectid" нарушает ограничение NOT NULL
+DETAIL:  Ошибочная строка содержит (26, Задвижка 16, null).
+CONTEXT:  SQL-оператор: "insert into public.object (name, type_objectid) VALUES (var_location, (SELECT type_object.id FROM type_object WHERE type_object.name = var_type_location))"
+функция PL/pgSQL set_masking_protections(integer,character varying,character varying,character varying,character varying,integer), строка 6, оператор SQL-оператор; Файл: C:\OpenServer\domains\trans\app\widgets\protection\Protection.php; Линия: 20 
+ ===================== 
+[2022-05-31 16:10:20] Сообщение: SQLSTATE[23502]: Not null violation: 7 ОШИБКА:  нулевое значение в столбце "type_objectid" нарушает ограничение NOT NULL
+DETAIL:  Ошибочная строка содержит (27, Задвижка 16, null).
+CONTEXT:  SQL-оператор: "insert into public.object (name, type_objectid) VALUES (var_location, (SELECT type_object.id FROM type_object WHERE type_object.name = var_type_location))"
+функция PL/pgSQL set_masking_protections(integer,character varying,character varying,character varying,character varying,integer), строка 6, оператор SQL-оператор; Файл: C:\OpenServer\domains\trans\app\widgets\protection\Protection.php; Линия: 20 
+ ===================== 
+[2022-05-31 16:13:29] Сообщение: Undefined array key "comment"; Файл: C:\OpenServer\domains\trans\app\controllers\PermissionController.php; Линия: 30 
+ ===================== 

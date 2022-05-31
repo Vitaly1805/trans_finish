@@ -73,9 +73,9 @@
                                 Основание для создания разрешения(приказ, распоряжение,служебная записка и т.д.):
                             </div>
                             {% if roles.isAuthor and permission.status_id < 3 %}
-                            <textarea class="permission-add__textarea permission-add__textarea_top textarea" name="description" id="description" cols="30" rows="10" placeholder="Введите описание...">{{permission.description}}</textarea>
+                            <textarea class="permission-add__textarea permission-add__textarea_top textarea" name="description" id="description" cols="30" rows="10" placeholder="Введите основание...">{{permission.description}}</textarea>
                             {% else %}
-                            <textarea readonly class="permission-add__textarea permission-add__textarea_top textarea" name="description" id="description" cols="30" rows="10" placeholder="Введите описание...">{{permission.description}}</textarea>
+                            <textarea readonly class="permission-add__textarea permission-add__textarea_top textarea" name="description" id="description" cols="30" rows="10" placeholder="Введите основание    ...">{{permission.description}}</textarea>
                             {% endif %}
                         </div>
                     </div>

@@ -61,7 +61,7 @@ class PDF
             10  // margin footer
         );
         $this->mpdf->WriteHTML($html);
-        $this->mpdf->Output("wefwef.pdf", 'I');
+        $this->mpdf->Output("wefwef.pdf", 'D');
     }
 
     protected function getHeader($number) {
@@ -212,9 +212,11 @@ class PDF
 
         $result .= "<div  style='margin: 0 0 5px 18px;'>4.2 Отметка об отсутствии(наличии) аварийного включения резерва(АВР) при выполнении работ: $emergencyActive.</div>";
 
-        $result .= $this->getResponsibleText(2, 'подготовку');
-        $result .= $this->getResponsibleText(3, 'выполнение');
-        $result .= $this->getResponsibleText(4, 'контроль при производстве');
+        $result .= $this->getResponsibleText(2, 'подготовку', 3);
+        $result .= $this->getResponsibleText(3, 'выполнение', 4);
+        $result .= $this->getResponsibleText(4, 'контроль при производстве', 5);
+        $result .= $this->getResponsibleText(6, 'проведение маскирования', 6);
+        $result .= $this->getResponsibleText(7, 'контроль при маскировании', 7);
 
         return $result;
     }
@@ -223,10 +225,10 @@ class PDF
         return "<span style='margin: 5px 0;font-weight: bold;'>5. При производстве работ обеспечить: </span><span>$description.</span>";
     }
 
-    protected function getResponsibleText($typeResponsiblesId, $nameEmployee) {
+    protected function getResponsibleText($typeResponsiblesId, $nameEmployee, $num) {
         $responsibles = $this->employee->getEmployee($typeResponsiblesId, $this->permissionId);
 
-        $result = "<div style='margin: 0 0 5px 18px;'>4.3. Ответственный за $nameEmployee работ: ";
+        $result = "<div style='margin: 0 0 5px 18px;'>4.$num. Ответственный за $nameEmployee работ: ";
         for ($i = 0; $i < count($responsibles); $i++) {
             $sign = '; ';
             if($i + 1 === count($responsibles)) {

@@ -129,7 +129,7 @@ class MainModel extends AppModel
     }
 
     public function setCurrentUser($email = '', $password = '', $rememberMe = false) {
-        $user = $this->user->getUsers(0, $email, 0, 0, '', 0);
+        $user = $this->user->getUsers(0, $email);
 
         if(isset($user[0]['password'])) {
             if (password_verify($password, $user[0]['password'])) {

@@ -151,7 +151,7 @@ class PermissionModel extends AppModel
         $objectProtection = new Protection($db);
 
         $permission = $this->permission->getPermission($permissionId)[0];
-        $objectPermission->setPermission(0, '', $permission['description'], $permission['addition'], $permission['subdivision_id'], $permission['untypical_work']);
+        $objectPermission->setPermission(0, '', $permission['description'], $permission['addition'], $permission['subdivision_id'], $permission['untypical_work'], 0, false, $permission['period_start'], $permission['period_end']);
         $dates = $this->date->getDates($permissionId);
         $objectStatusLog->addStatusManagementLog($_SESSION['idCurrentPermission'], 1, $_COOKIE['user'], '');
         $employees = $this->employee->getEmployee(0, $permissionId);
@@ -172,7 +172,7 @@ class PermissionModel extends AppModel
 
         foreach ($protections as $protection) {
             $objectProtection->setMaskingProtectionsStuttering($_SESSION['idCurrentPermission'], $protection['vtor_id'], $protection['entrance_id'], $protection['protectionid'],
-                $protection['masking'], $protection['check_masking'], $protection['unmasking'], $protection['check_unmasking'], $protection['objectid']);
+                false, false, false, false, $protection['objectid']);
         }
         $this->setLog('создал разрешение', $_COOKIE['user'], $this->db, "№{$_SESSION['idCurrentPermission']}");
         $this->redirect('permission', 'add');
@@ -466,12 +466,17 @@ class PermissionModel extends AppModel
         $objectProtection = new Protection($db);
 
         foreach ($permissions as $permission) {
+            if(!isset($permission['period_start'])) {
+                $permission['period_start'] = Null;
+                $permission['period_end'] = Null;
+            }
+
             if($nameDb === 'trans_archive') {
                 $objectPermission->setPermission($permission['id'], $permission['number'], $permission['description'],
-                    $permission['addition'], $permission['subdivision_id'], $permission['untypical_work']);
+                    $permission['addition'], $permission['subdivision_id'], $permission['untypical_work'], 0, false, $permission['period_start'], $permission['period_end']);
             } else {
                 $objectPermission->recoveryPermission($permission['id'], $permission['number'], $permission['description'],
-                    $permission['addition'], $permission['subdivision_id'], $permission['untypical_work']);
+                    $permission['addition'], $permission['subdivision_id'], $permission['untypical_work'], 0, false, $permission['period_start'], $permission['period_end']);
             }
 
             $statusesLog = $this->statusLog->getStatusManagementLogs($permission['id']);
@@ -643,6 +648,7 @@ class PermissionModel extends AppModel
     public function getIndexVarsToTwig() {
         $roles = $this->role->getRoles($_COOKIE['user']);
         $currentUser = $this->user->getUsers($_COOKIE['user'])[0];
+//        dumper($this->protection->getProtectionsOfPermissionThisStatuses($_COOKIE['user']));
 
         return ['date_start' => $this->getDate('date_start'),
             'date_end' => $this->getDate('date_end'),

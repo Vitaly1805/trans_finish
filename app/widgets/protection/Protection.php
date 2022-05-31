@@ -55,7 +55,7 @@ class Protection
     public function getProtectionsTuSearch($tuname, $search):array {
         $query = "SELECT * FROM get_protections_tu_search(:tuname, :search)";
         $stmt = $this->db->prepare($query);
-        $stmt->execute(array('npsname' => $tuname, 'search' => $search));
+        $stmt->execute(array('tuname' => $tuname, 'search' => $search));
 
         return $stmt->fetchAll();
     }

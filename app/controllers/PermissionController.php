@@ -27,7 +27,7 @@ class PermissionController extends AppController
         } elseif(isset($_POST['agreement-permission'])) {
             $this->model->addStatusOfPermission($_POST['id'], 2);
         } elseif(isset($_POST['cancel-apply-permission'])) {
-            $this->model->addStatusOfPermission($_POST['id'], 2, $_POST['comment'], $_POST['date'], $_POST['time']);
+            $this->model->addStatusOfPermission($_POST['id'], 2);
         } elseif(isset($_POST['apply-permission'])) {
             $this->model->addStatusOfPermission($_POST['id'], 3, $_POST['comment'], $_POST['date'], $_POST['time']);
         } elseif(isset($_POST['activemasking-permission'])) {
@@ -51,7 +51,7 @@ class PermissionController extends AppController
         } elseif(isset($_POST['activeunmasking-permission'])) {
             $this->model->addStatusOfPermission($_POST['id'], 10);
         } elseif(isset($_POST['recovery-permission'])) {
-            $this->model->addStatusOfPermission($_POST['id']);
+            $this->model->addStatusOfPermission($_POST['id'], 6);
         } elseif(isset($_POST['start-work'])) {
             $this->model->addStatusOfPermission($_POST['id'], 14, $_POST['comment'], $_POST['date'], $_POST['time']);
         } elseif(isset($_POST['finish-work'])) {

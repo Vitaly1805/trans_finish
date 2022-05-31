@@ -78,7 +78,7 @@
 								</div>
 								<div class="table-content-mask__col table-col">
 									<input type="text" name="protection_id-{{i}}" value="{{protection.id}}" hidden>
-									<input type="text" name="protection-{{i}}" class="table-mask-col__input protection input-row" value="{{protection.protection_name}}" required="required" readonly>
+                                    <textarea type="text" name="protection-{{i}}" class="table-mask-col__input protection input-row" value="{{protection.protection_name}}" required="required" style="resize:none; font-size: 14px; width: 100%; overflow: hidden; height: 100%" readonly>{{protection.protection_name}}</textarea>
 								</div>
 								<div class="table-content-mask__col table-col">
 									<label class="check-entrance">

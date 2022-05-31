@@ -41,9 +41,9 @@
 						<div class="content-maskadd__system-header">Выберите систему:</div>
 						<div class="system-block">
 							<div class="system-block__header">ЦСПА:</div>
-							<div class="system-block__element"><a href="http://trans/mask-add/addtu/?id=Технологический участок 1">ТУ1</a></div>
-							<div class="system-block__element"><a href="http://trans/mask-add/addtu/?id=Технологический участок 2">ТУ2</a></div>
-							<div class="system-block__element"><a href="http://trans/mask-add/addtu/?id=Технологический участок 3">ТУ3</a></div>
+							<div class="system-block__element"><a href="http://trans/mask-add/addtu/?id=ТУ Уса-Ухта">ТУ "Уса-Ухта"</a></div>
+							<div class="system-block__element"><a href="http://trans/mask-add/addtu/?id=ТУ Ухта-Приводино">ТУ "Ухта-Приводино"</a></div>
+							<div class="system-block__element"><a href="http://trans/mask-add/addtu/?id=ТУ Приводино-Ярославль">ТУ "Приводино-Ярославль"</a></div>
 						</div>
 						<div class="system-block">
 							<div class="system-block__header">МПСА:</div>
@@ -65,20 +65,20 @@
 						</div>
 						<div class="system-block">
 							<div class="system-block__header">СОУ:</div>
-							<div class="system-block__element"><a href="http://trans/mask-add/addlu/?id=Линейный участок 1">ЛУ1</a></div>
-							<div class="system-block__element"><a href="http://trans/mask-add/addlu/?id=Линейный участок 2">ЛУ2</a></div>
-							<div class="system-block__element"><a href="http://trans/mask-add/addlu/?id=Линейный участок 3">ЛУ3</a></div>
-							<div class="system-block__element"><a href="http://trans/mask-add/addlu/?id=Линейный участок 4">ЛУ4</a></div>
-							<div class="system-block__element"><a href="http://trans/mask-add/addlu/?id=Линейный участок 5">ЛУ5</a></div>
-							<div class="system-block__element"><a href="http://trans/mask-add/addlu/?id=Линейный участок 6">ЛУ6</a></div>
-							<div class="system-block__element"><a href="http://trans/mask-add/addlu/?id=Линейный участок 7">ЛУ7</a></div>
-							<div class="system-block__element"><a href="http://trans/mask-add/addlu/?id=Линейный участок 8">ЛУ8</a></div>
-							<div class="system-block__element"><a href="http://trans/mask-add/addlu/?id=Линейный участок 9">ЛУ9</a></div>
-							<div class="system-block__element"><a href="http://trans/mask-add/addlu/?id=Линейный участок 10">ЛУ10</a></div>
-							<div class="system-block__element"><a href="http://trans/mask-add/addlu/?id=Линейный участок 11">ЛУ11</a></div>
-							<div class="system-block__element"><a href="http://trans/mask-add/addlu/?id=Линейный участок 12">ЛУ12</a></div>
-							<div class="system-block__element"><a href="http://trans/mask-add/addlu/?id=Линейный участок 13">ЛУ13</a></div>
-							<div class="system-block__element"><a href="http://trans/mask-add/addlu/?id=Линейный участок 14">ЛУ14</a></div>
+							<div class="system-block__element"><a href="http://trans/mask-add/addlu/?id=Линейный участок 1">ЛУ "Уса-Сыня"</a></div>
+							<div class="system-block__element"><a href="http://trans/mask-add/addlu/?id=Линейный участок 2">ЛУ "Сыня-Печёра"</a></div>
+							<div class="system-block__element"><a href="http://trans/mask-add/addlu/?id=Линейный участок 3">ЛУ "Печёра-Чикшино"</a></div>
+							<div class="system-block__element"><a href="http://trans/mask-add/addlu/?id=Линейный участок 4">ЛУ "Чикшино-Зеленоборск"</a></div>
+							<div class="system-block__element"><a href="http://trans/mask-add/addlu/?id=Линейный участок 5">ЛУ "Зеленоборск-Таёжное"</a></div>
+							<div class="system-block__element"><a href="http://trans/mask-add/addlu/?id=Линейный участок 6">ЛУ "Таёжное-Ухта-1"</a></div>
+							<div class="system-block__element"><a href="http://trans/mask-add/addlu/?id=Линейный участок 7">ЛУ "Ухта-1-Синдор"</a></div>
+							<div class="system-block__element"><a href="http://trans/mask-add/addlu/?id=Линейный участок 8">ЛУ "Синдор-Микунь"</a></div>
+							<div class="system-block__element"><a href="http://trans/mask-add/addlu/?id=Линейный участок 9">ЛУ "Микунь-Урдома"</a></div>
+							<div class="system-block__element"><a href="http://trans/mask-add/addlu/?id=Линейный участок 10">ЛУ "Урдома-Приводино"</a></div>
+							<div class="system-block__element"><a href="http://trans/mask-add/addlu/?id=Линейный участок 11">ЛУ "Приводино-Нюксеница"</a></div>
+							<div class="system-block__element"><a href="http://trans/mask-add/addlu/?id=Линейный участок 12">ЛУ "Нюксеница-Погорелово"</a></div>
+							<div class="system-block__element"><a href="http://trans/mask-add/addlu/?id=Линейный участок 13">ЛУ "Погорелово-Грязовец"</a></div>
+							<div class="system-block__element"><a href="http://trans/mask-add/addlu/?id=Линейный участок 14">ЛУ "Грязовец-Ярославль"</a></div>
 						</div>
 						
 

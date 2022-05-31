@@ -37,8 +37,8 @@ class Permission
         return $results;
     }
 
-    public function setPermission($permissionId = 0, $number = '', $description = '', $addition = '', $subdivisionId = 0, $untypicalWork = '', $emergencyMinute = 0, $isEmergencyActivation = false):void {
-        $query = "SELECT * FROM add_permission(:permission_id, :number, :description, :addition, :subdivision_id, :untypical_work, :emergency_minute, :is_emergency_activation)";
+    public function setPermission($permissionId = 0, $number = '', $description = '', $addition = '', $subdivisionId = 0, $untypicalWork = '', $emergencyMinute = 0, $isEmergencyActivation = false, $periodStart = Null, $periodEnd = Null):void {
+        $query = "SELECT * FROM add_permission(:permission_id, :number, :description, :addition, :subdivision_id, :untypical_work, :emergency_minute, :is_emergency_activation, :period_start, :period_end)";
         $stmt = $this->pdo->prepare($query);
         $stmt->bindValue(':permission_id', $permissionId, PDO::PARAM_INT);
         $stmt->bindValue(':number', $number, PDO::PARAM_STR_CHAR);
@@ -48,6 +48,8 @@ class Permission
         $stmt->bindValue(':untypical_work', $untypicalWork, PDO::PARAM_STR);
         $stmt->bindValue(':emergency_minute', $emergencyMinute, PDO::PARAM_INT);
         $stmt->bindValue(':is_emergency_activation', $isEmergencyActivation, PDO::PARAM_BOOL);
+        $stmt->bindValue(':period_start', $periodStart, PDO::PARAM_STR);
+        $stmt->bindValue(':period_end', $periodEnd, PDO::PARAM_STR);
         $stmt->execute();
 
         $_SESSION['idCurrentPermission'] =  $stmt->fetch()['id'];
@@ -55,6 +57,7 @@ class Permission
 
     public function updatePermission($permissionId, $description, $addition, $number, $subdivisionId, $untypicalWork, $emergencyMinute = 0, $isEmergencyActivation = false, $periodStart = '', $periodEnd = ''):void {
         $number = strval($number);
+
         $query = "SELECT * FROM update_permission(:permission_id, :number, :description, :addition, :subdivision_id, :untypical_work, :emergency_minute, :is_emergency_activation, :period_start, :period_end)";
         $stmt = $this->pdo->prepare($query);
         $stmt->bindValue(':permission_id', $permissionId, PDO::PARAM_INT);
@@ -68,12 +71,10 @@ class Permission
         $stmt->bindValue(':period_start', $periodStart, PDO::PARAM_STR);
         $stmt->bindValue(':period_end', $periodEnd, PDO::PARAM_STR);
         $stmt->execute();
-//        $stmt->execute(array('permission_id' => $permissionId, 'description' => $description, 'addition' => $addition,
-//            'number' => $number, 'subdivision_id' => $subdivisionId, 'untypical_work' => $untypicalWork));
     }
 
-    public function recoveryPermission($permissionId, $number, $description, $addition, $subdivisionId, $untypicalWork, $emergencyMinute = 0, $isEmergencyActivation = false):void {
-        $query = "SELECT * FROM recovery_permission(:permission_id, :number, :description, :addition, :subdivision_id, :untypical_work, :emergency_minute, :is_emergency_activation)";
+    public function recoveryPermission($permissionId, $number, $description, $addition, $subdivisionId, $untypicalWork, $emergencyMinute = 0, $isEmergencyActivation = false, $periodStart = Null, $periodEnd = Null):void {
+        $query = "SELECT * FROM recovery_permission(:permission_id, :number, :description, :addition, :subdivision_id, :untypical_work, :emergency_minute, :is_emergency_activation, :period_start, :period_end)";
         $stmt = $this->pdo->prepare($query);
         $stmt->bindValue(':permission_id', $permissionId, PDO::PARAM_INT);
         $stmt->bindValue(':number', $number, PDO::PARAM_STR_CHAR);
@@ -83,6 +84,8 @@ class Permission
         $stmt->bindValue(':untypical_work', $untypicalWork, PDO::PARAM_STR);
         $stmt->bindValue(':emergency_minute', $emergencyMinute, PDO::PARAM_INT);
         $stmt->bindValue(':is_emergency_activation', $isEmergencyActivation, PDO::PARAM_BOOL);
+        $stmt->bindValue(':period_start', $periodStart, PDO::PARAM_STR);
+        $stmt->bindValue(':period_end', $periodEnd, PDO::PARAM_STR);
         $stmt->execute();
     }
 
